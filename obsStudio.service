@@ -1,0 +1,12 @@
+[Unit]
+Description=OBS Studio
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/obs --minimize-to-tray
+User=brenner
+# Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical.target

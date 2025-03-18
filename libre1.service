@@ -1,0 +1,12 @@
+[Unit]
+Description=Libre Office
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/libreoffice --calc
+User=brenner
+# Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical.target
