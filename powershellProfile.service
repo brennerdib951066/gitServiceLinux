@@ -1,0 +1,13 @@
+[Unit]
+Description=Profile powershell
+After=display-manager.service
+
+[Service]
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/usr/bin/kate '/home/brenner/.config/powershell/Microsoft.PowerShell_profile.ps1'
+User=brenner
+# Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Googgle
+After=graphical.target
+
+[Service]
+ExecStartPre=/usr/bin/sleep 10
+ExecStart=/usr/bin/google-chrome-stable '--profile-directory=DIB' 'https://bubble.io/page?id=viverbemseguroscrm&tab=tabs-1&name=escolhaLocomocao&type=custom&version=41h0i'  'https://bubble.io/page?id=viverbemseguroscrm&tab=tabs-3&name=escolhaLocomocao&type=custom&subtab=Data+Types&type_id=outros_dados&version=41h0i' 'https://www.sistemaviverbemseguros.com/version-41h0i'
+User=brenner
+# Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical.target

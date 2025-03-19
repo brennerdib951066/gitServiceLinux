@@ -1,10 +1,10 @@
 [Unit]
-Description=OBS Studio
+Description=Flameshot
 After=graphical.target
 
 [Service]
-ExecStartPre=/usr/bin/sleep 15
-ExecStart=/usr/bin/obs --minimize-to-tray
+ExecStartPre=/usr/bin/sleep 10
+ExecStart=/usr/bin/flameshot
 User=brenner
 # Restart=always
 Environment=DISPLAY=:0
